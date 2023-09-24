@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        var date=new Date();
+        var monthNames = ["Januray", "February", "March", "April", "May", "June", "July", "August", "September", "October", "Novermber", "December"];
+
+        function showDate(){
+            document.getElementById("date").innerHTML=
+            String(date.getDate()+"/"+monthNames[date.getMonth()]+"/"+date.getFullYear())
+        }
+
+        function showTime(){
+            document.getElementById("time").innerHTML = date;
+        }
+    </script>
+</head>
+<body>
+
+    <button onclick="showDate()">show date</button><br>
+    <p id="date"></p>
+    <br>
+    <button onclick="showTime()">show time</button><br>
+    <p id="time"></p>
+</body>
+</html>

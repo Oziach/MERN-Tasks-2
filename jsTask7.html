@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            text-align: center;
+        }
+        img{
+            position: relative;
+            
+            animation-name: anime1;
+            animation-iteration-count: infinite;
+            animation-duration: 3s;
+        }
+
+        .paused{
+            animation-play-state: paused;
+        }
+
+        @keyframes anime1{
+            from{
+                left:-50%;
+            }
+            to{
+                left:50%;
+            }
+        }
+    </style>
+
+    <script>
+
+        function start(){
+            document.getElementById("animation").innerHTML="<img src='Capture.PNG'><br>"
+        }
+
+        function stop(){
+            document.getElementById("animation").innerHTML="<img src='Capture.PNG' class='paused'><br>"
+        }
+    </script>
+</head>
+<body>
+    <div id="animation">
+        <img src="Capture.PNG"><br>
+    </div>
+    
+    <h2>Click the following buttons to handle the animation</h2>
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+
+</body>
+</html>
